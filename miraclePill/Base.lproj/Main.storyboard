@@ -151,7 +151,16 @@
                                     <constraint firstAttribute="height" constant="28" id="bAb-kA-Qqc"/>
                                 </constraints>
                                 <state key="normal" image="buyNowBtn"/>
+                                <connections>
+                                    <action selector="buyNowBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jSF-qu-oyi"/>
+                                </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="Khy-am-69j">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="I18-p0-Eix"/>
+                                    <constraint firstAttribute="width" constant="240" id="VLi-cI-WeN"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -174,10 +183,12 @@
                             <constraint firstItem="qI4-ym-DXe" firstAttribute="trailing" secondItem="551-mA-R0K" secondAttribute="trailing" id="IJE-kW-AEj"/>
                             <constraint firstItem="eH0-uL-gkT" firstAttribute="trailing" secondItem="Fkb-PJ-MLl" secondAttribute="trailing" id="IWJ-Q3-b9o"/>
                             <constraint firstItem="2lF-ef-o4o" firstAttribute="centerX" secondItem="s2p-x6-BVE" secondAttribute="centerX" id="JAz-rn-iL9"/>
+                            <constraint firstItem="Khy-am-69j" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ko8-MG-OwO"/>
                             <constraint firstItem="BSU-b9-ZLM" firstAttribute="centerX" secondItem="cHj-ON-z5X" secondAttribute="centerX" id="OIs-eL-bhG"/>
                             <constraint firstItem="Fkb-PJ-MLl" firstAttribute="leading" secondItem="b2f-yX-Y0p" secondAttribute="leading" id="OX3-7A-9t9"/>
                             <constraint firstItem="LFc-uE-UIr" firstAttribute="leading" secondItem="eH0-uL-gkT" secondAttribute="leading" id="P8t-tO-w9f"/>
                             <constraint firstItem="qI4-ym-DXe" firstAttribute="top" secondItem="551-mA-R0K" secondAttribute="bottom" constant="8" id="VMa-Fi-CVS"/>
+                            <constraint firstItem="Khy-am-69j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VQc-qq-c72"/>
                             <constraint firstItem="yne-XB-DKe" firstAttribute="top" secondItem="5P3-k0-JkB" secondAttribute="bottom" constant="8" id="VgB-9G-4re"/>
                             <constraint firstItem="LFc-uE-UIr" firstAttribute="trailing" secondItem="eH0-uL-gkT" secondAttribute="trailing" id="WMx-Ai-fGW"/>
                             <constraint firstItem="5P3-k0-JkB" firstAttribute="trailing" secondItem="LFc-uE-UIr" secondAttribute="trailing" id="Wui-FT-yUH"/>
@@ -209,12 +220,24 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="D150" destination="cHj-ON-z5X" id="NTB-Sr-Gxh"/>
                         <outlet property="buyNow" destination="aeQ-OV-Gng" id="hQB-tL-Awv"/>
+                        <outlet property="city" destination="qI4-ym-DXe" id="yB9-wp-WuW"/>
                         <outlet property="country" destination="eH0-uL-gkT" id="sge-X7-4Be"/>
+                        <outlet property="divider" destination="BSU-b9-ZLM" id="gh5-xW-Nv6"/>
+                        <outlet property="enterYourAddress" destination="551-mA-R0K" id="Gi7-AH-TZV"/>
+                        <outlet property="enterYourCity" destination="hEH-Pn-h6X" id="alj-YU-SZJ"/>
                         <outlet property="enterYourCountry" destination="LFc-uE-UIr" id="2eI-Sx-rW1"/>
+                        <outlet property="enterYourFullName" destination="5lo-32-04C" id="Ayk-Ui-FCP"/>
                         <outlet property="enterYourZipCode" destination="yne-XB-DKe" id="WAc-nU-TO2"/>
+                        <outlet property="fullName" destination="dmH-dn-PkJ" id="q3B-IV-j1P"/>
+                        <outlet property="miraclePillEmoji" destination="s2p-x6-BVE" id="aRq-U3-Owr"/>
+                        <outlet property="miraclePills" destination="2lF-ef-o4o" id="hGv-lr-lxM"/>
+                        <outlet property="state" destination="b2f-yX-Y0p" id="qab-7k-u7a"/>
                         <outlet property="statePicker" destination="aN4-08-K8p" id="A7x-So-Oz7"/>
                         <outlet property="statePickerBtn" destination="Fkb-PJ-MLl" id="1Ls-Zy-CoV"/>
+                        <outlet property="streetAdress" destination="jL2-cv-86x" id="Rf1-cO-wnb"/>
+                        <outlet property="successIndicator" destination="Khy-am-69j" id="3mB-Kf-jvz"/>
                         <outlet property="zipCode" destination="5P3-k0-JkB" id="3ax-UT-cWM"/>
                     </connections>
                 </viewController>
@@ -226,5 +249,6 @@
     <resources>
         <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>

@@ -24,6 +24,23 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet weak var buyNow: UIButton!
     
+
+    
+    @IBOutlet weak var miraclePillEmoji: UIImageView!
+    @IBOutlet weak var miraclePills: UILabel!
+    @IBOutlet weak var D150: UILabel!
+    @IBOutlet weak var divider: UIView!
+    @IBOutlet weak var fullName: UILabel!
+    @IBOutlet weak var enterYourFullName: UITextField!
+    @IBOutlet weak var streetAdress: UILabel!
+    @IBOutlet weak var enterYourAddress: UITextField!
+    @IBOutlet weak var city: UILabel!
+    @IBOutlet weak var enterYourCity: UITextField!
+    @IBOutlet weak var state: UILabel!
+    
+    @IBOutlet weak var successIndicator: UIImageView!
+    
+    
     
     
     
@@ -52,6 +69,44 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         buyNow.isHidden = true
         
     }
+    
+    @IBAction func buyNowBtnPressed(_ sender: AnyObject) {
+        
+        statePicker.isHidden = true
+        statePickerBtn.isHidden = true
+        
+        
+        country.isHidden = true
+        
+        enterYourCountry.isHidden = true
+        
+        zipCode.isHidden = true
+        
+        enterYourZipCode.isHidden = true
+        
+        buyNow.isHidden = true
+        
+        
+        
+        miraclePillEmoji.isHidden = true
+        miraclePills.isHidden = true
+        D150.isHidden = true
+        divider.isHidden = true
+        fullName.isHidden = true
+        enterYourFullName.isHidden = true
+        streetAdress.isHidden = true
+        enterYourAddress.isHidden = true
+        city.isHidden = true
+        enterYourCity.isHidden = true
+        state.isHidden = true
+        
+        successIndicator.isHidden = false
+
+        
+        
+        
+    }
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
